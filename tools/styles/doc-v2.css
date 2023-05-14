@@ -1,0 +1,12 @@
+.prayer_body{
+  font-style: italic;
+  font-size: 12px;
+}
+.hidden{
+  display: none;
+}
+.title{
+  font-weight: bold;
+  text-align: center;
+  margin: 30px;
+}
