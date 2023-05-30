@@ -470,7 +470,7 @@ class Search extends Common
   }
   public function countThis($content, $str){
     $check_pattern = '/[a-zA-Z]/';
-    $query_pattern = "/\b".$str."\b/iu";
+    $query_pattern = "/\W".$str."(s)?(es)?(e)?(le)?(ne)?(les)?(nes)?(sse)?(sses)?(r)?(nt)?(z)?(ir)?(ssent)?(ssons)?(ons)?(ment)?(ments)?(lement)?\W/iu";
     if(preg_match($check_pattern , $str)){
       $count = preg_match_all($query_pattern, $content);
       return $count;
