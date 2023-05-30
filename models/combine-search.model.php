@@ -403,7 +403,7 @@ class CombineSearch extends Common
   */
   public function countThis($content, $str){
     $check_pattern = '/[a-zA-Z]/';
-    $query_pattern = "/\b".$str."\b/i";
+    $query_pattern = "/\b".$str."\b/iu";
     if(preg_match($check_pattern , $str)){
       $count = preg_match_all($query_pattern, $content);
       return $count;

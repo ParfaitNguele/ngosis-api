@@ -1,0 +1,9 @@
+# Set the headers for the restful api
+#Header always set Access-Control-Allow-Origin http://localhost:4200
+<IfModule mod_headers.c>
+  SetEnvIf Origin "http(s)?://(www\.)?(localhost:4200|localhost:8100)$" AccessControlAllowOrigin=$0$1
+  Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+</IfModule>
+Header always set Access-Control-Max-Age "1000"
+Header always set Access-Control-Allow-Headers "X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token, Accept-Encoding"
+Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"

@@ -40,7 +40,7 @@ class Common extends DataBaseConnexion
     sanitizer
   */
   public function sanitize($data){
-    $newData = htmlspecialchars(trim($data), ENT_QUOTES);
+    $newData = trim($data);
     return $newData;
   }
   /*
@@ -69,3 +69,14 @@ class Common extends DataBaseConnexion
     return $int;
   }
 }
+/*
+UPDATE psaumes SET nom_psaume = REPLACE(nom_psaume, "'", "&#039;");
+UPDATE psaumes SET nom_psaume = REPLACE(nom_psaume, "’", "&#039;");
+
+
+UPDATE psaumes SET contenu_psaume = REPLACE(contenu_psaume, "'", "&#039;");
+UPDATE psaumes SET contenu_psaume = REPLACE(contenu_psaume, "’", "&#039;");
+
+UPDATE psaumes SET contenu_priere = REPLACE(contenu_priere, "'", "&#039;");
+UPDATE psaumes SET contenu_priere = REPLACE(contenu_priere, "’", "&#039;");
+*/

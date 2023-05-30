@@ -19,7 +19,7 @@ function createDoc($data){
     $prayerTitle = "<p class='".$data->prayer_statut." title'>".$data->prayer_title."</p>";
     $prayerBody = "<div class='prayer_body ".$data->prayer_statut."'>".$data->prayer_body."</div>";
     $docBody = "<body>".$psaumeTitle.$psaumeBody.$prayerTitle.$prayerBody."</body>";
-    $docStart = '<!DOCTYPE html><html lang="fr" dir="ltr"><head><link rel="stylesheet" href="styles/doc-v2.css"><title>'.$docTitle.'</title></head>';
+    $docStart = '<!DOCTYPE html><html lang="fr" dir="ltr"><head><link rel="stylesheet" href="styles/doc-v3.css"><title>'.$docTitle.'</title></head>';
     $docEnd = '</html>';
     $doc = $docStart.$docBody.$docEnd;
     $mpdf->WriteHTML($doc);
